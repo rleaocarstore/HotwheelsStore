@@ -1,5 +1,5 @@
 :root {
-  --primary: #c98014;
+  --primary: #ec0d0d;
   --bg: #010101;
 }
 
@@ -200,7 +200,7 @@ body {
   width: 100%;
   text-align: center;
   position: fixed;
-  top: 150px;
+  top: 200px;
 }
 
 .hero .content h1 {
@@ -215,7 +215,7 @@ body {
 }
 
 .hero .content {
-  font-size: 1.6rem;
+  font-size: 1rem;
   margin-top: 1rem;
   line-height: 1.2rem;
 }
@@ -276,10 +276,10 @@ body {
 
 .about .row .about-img img {
   width: 100%;
-  -webkit-mask-image: url("../img/hw.svg");
-  -webkit-mask-size: 80%;
+  /*-webkit-mask-image: url("../img/hw.svg");
+  -webkit-mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
+  -webkit-mask-position: center; */
 }
 
 .about .row .content {
@@ -553,6 +553,75 @@ footer .credit a {
 }
 
 .modal-content a {
+  display: flex;
+  gap: 1rem;
+  width: 12rem;
+  background-color: var(--primary);
+  color: #fff;
+  margin-top: 1rem;
+  padding: 1rem 1.6rem;
+}
+
+/* panel Box */
+/* Item panel */
+.panel {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.panel-container {
+  position: relative;
+  background-color: #fefefe;
+  color: var(--bg);
+  margin: 15% auto;
+  padding: 1.2rem;
+  border: 1px solid #666;
+  width: 80%;
+  animation: animatepanel 0.5s;
+}
+
+/* panel Animation */
+@keyframes animatepanel {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.panel-container .close-icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.panel-content {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.panel-content img {
+  height: 15rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.panel-content p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+.panel-content a {
   display: flex;
   gap: 1rem;
   width: 12rem;

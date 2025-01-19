@@ -46,10 +46,17 @@ document.addEventListener("click", function (e) {
 // Modal Box
 const itemDetailModal = document.querySelector("#item-detail-modal");
 const itemDetailButtons = document.querySelectorAll(".item-detail-button");
-
 itemDetailButtons.forEach((btn) => {
   btn.onclick = (e) => {
     itemDetailModal.style.display = "flex";
+    e.preventDefault();
+  };
+});
+const itemDetailS15 = document.querySelector("#item-detail-S15");
+const itemDetailButtonss = document.querySelectorAll(".item-detail-buttons");
+itemDetailButtons.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemDetailS15.style.display = "flex";
     e.preventDefault();
   };
 });
@@ -66,3 +73,26 @@ window.onclick = (e) => {
     itemDetailModal.style.display = "none";
   }
 };
+
+/*// panel Box
+const itemDetailpanel = document.querySelector("#item-detail-panel");
+const itemDetailButtons = document.querySelectorAll(".item-detail-button");
+itemDetailButtons.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemDetailpanel.style.display = "flex";
+    e.preventDefault();
+  };
+});
+
+// klik tombol close panel
+document.querySelector(".panel .close-icon").onclick = (e) => {
+  itemDetailpanel.style.display = "none";
+  e.preventDefault();
+};
+
+// klik di luar panel
+window.onclick = (e) => {
+  if (e.target === itemDetailpanel) {
+    itemDetailpanel.style.display = "none";
+  }
+};*/
